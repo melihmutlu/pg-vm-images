@@ -1,0 +1,13 @@
+# escape=`
+
+FROM windows_ci_vs_base
+
+COPY `
+  scripts/windows_install_mingw64.ps1 `
+  scripts/
+
+RUN `
+  `
+  scripts\windows_install_mingw64.ps1 ; `
+  `
+  Remove-Item C:\scripts -Force -Recurse
