@@ -6,8 +6,8 @@ env:
   CIRRUS_LOG_TIMESTAMP: true
 
   # See gcp_project_setup.txt for setup instructions
-  GCP_PROJECT_MAIN: pg-ci-images
-  GCP_PROJECT_DEV: pg-ci-images-dev
+  GCP_PROJECT_MAIN: pg-ci-images-melih
+  GCP_PROJECT_DEV: pg-ci-images-melih
 
   # the following variables are chosen in .cirrus.star, based on the branch
   # being built etc
@@ -23,9 +23,9 @@ env:
 gcp_auth: &gcp_auth
   env:
     # image-builder@pg-ci-images-dev.iam.gserviceaccount.com
-    GAC_DEV: ENCRYPTED[c11b72762b062ffe6f9eb672b9236f3fdfe3404edd786e47fc17ff79714e633688e79da85b9efccd79d52a6322a4f60f]
+    GAC_DEV: ENCRYPTED[26fd50db878eb61ff8b0550f62b4a2f54ffc78dbc7a3f92f70b2f51df9babc1991d5e363c478661886e429624397f696]
     # image-builder@pg-ci-images.iam.gserviceaccount.com
-    GAC_MAIN: ENCRYPTED[388f06938c10a81478033cb9059c454d1d2e7580e9060e539f0be518b823b5a73cb1bc7c7fcefe351131c57c404c143f]
+    GAC_MAIN: ENCRYPTED[26fd50db878eb61ff8b0550f62b4a2f54ffc78dbc7a3f92f70b2f51df9babc1991d5e363c478661886e429624397f696]
 
 # gcp auth for unixoid systems
 gcp_auth_unix: &gcp_auth_unix
