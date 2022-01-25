@@ -1,6 +1,6 @@
 # Due to the dependency on encrypted variables, this will only work in a
 # specific repo
-only_if: $CIRRUS_REPO_OWNER == 'anarazel' && $CIRRUS_REPO_NAME == 'pg-vm-images'
+only_if: $CIRRUS_REPO_OWNER == 'melihmutlu' && $CIRRUS_REPO_NAME == 'pg-vm-images'
 
 env:
   CIRRUS_LOG_TIMESTAMP: true
