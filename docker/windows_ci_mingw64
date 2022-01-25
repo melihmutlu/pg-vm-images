@@ -1,6 +1,6 @@
 # escape=`
 
-FROM windows_ci_vs_base
+FROM windows_ci_base
 
 COPY `
   scripts/windows_install_mingw64.ps1 `

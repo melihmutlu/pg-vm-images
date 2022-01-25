@@ -298,3 +298,18 @@ task:
     - vcvarsall x64
     - bison --version
     - flex --version
+
+task:
+  name: test-windows-container-mingw64-amd64
+  depends_on:
+    - build-containers-windows
+  windows_container:
+    image: $GCP_REPO/windows_ci_mingw64:latest
+  test_script:
+    - ver
+    - set
+    - perl --version
+    - C:\msys64\usr\bin\bash.exe -lc 'python --version'
+    - C:\msys64\usr\bin\bash.exe -lc 'bison --version'
+    - C:\msys64\usr\bin\bash.exe -lc 'flex --version'
+
