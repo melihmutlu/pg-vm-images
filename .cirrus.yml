@@ -1,13 +1,13 @@
 # Due to the dependency on encrypted variables, this will only work in a
 # specific repo
-only_if: $CIRRUS_REPO_OWNER == 'anarazel' && $CIRRUS_REPO_NAME == 'pg-vm-images'
+only_if: $CIRRUS_REPO_OWNER == 'melihmutlu' && $CIRRUS_REPO_NAME == 'pg-vm-images'
 
 env:
   CIRRUS_LOG_TIMESTAMP: true
 
   # See gcp_project_setup.txt for setup instructions
-  GCP_PROJECT_MAIN: pg-ci-images
-  GCP_PROJECT_DEV: pg-ci-images-dev
+  GCP_PROJECT_MAIN: pg-ci-images-melih
+  GCP_PROJECT_DEV: pg-ci-images-melih
 
   # the following variables are chosen in .cirrus.star, based on the branch
   # being built etc
@@ -23,9 +23,9 @@ env:
 gcp_auth: &gcp_auth
   env:
     # image-builder@pg-ci-images-dev.iam.gserviceaccount.com
-    GAC_DEV: ENCRYPTED[c11b72762b062ffe6f9eb672b9236f3fdfe3404edd786e47fc17ff79714e633688e79da85b9efccd79d52a6322a4f60f]
+    GAC_DEV: ENCRYPTED[df74265d3c2d35b63351fbc457641f1a51b095e30f46be3e7c7d63a0d19d7995fed270e50a025354fc62a4ff2fca3ec4]
     # image-builder@pg-ci-images.iam.gserviceaccount.com
-    GAC_MAIN: ENCRYPTED[388f06938c10a81478033cb9059c454d1d2e7580e9060e539f0be518b823b5a73cb1bc7c7fcefe351131c57c404c143f]
+    GAC_MAIN: ENCRYPTED[df74265d3c2d35b63351fbc457641f1a51b095e30f46be3e7c7d63a0d19d7995fed270e50a025354fc62a4ff2fca3ec4]
 
 # gcp auth for unixoid systems
 gcp_auth_unix: &gcp_auth_unix
