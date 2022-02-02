@@ -308,8 +308,7 @@ task:
   test_script:
     - ver
     - set
-    - perl --version
-    - C:\msys64\usr\bin\bash.exe -lc 'python --version'
+    - C:\msys64\usr\bin\bash.exe -lc 'perl --version'
     - C:\msys64\usr\bin\bash.exe -lc 'bison --version'
     - C:\msys64\usr\bin\bash.exe -lc 'flex --version'
 

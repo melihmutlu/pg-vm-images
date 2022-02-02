@@ -9,5 +9,6 @@ COPY `
 RUN `
   `
   scripts\windows_install_mingw64.ps1 ; `
+  [Environment]::SetEnvironmentVariable('MSYSTEM', 'UCRT64', 'Machine') ; `
   `
   Remove-Item C:\scripts -Force -Recurse
