@@ -23,4 +23,5 @@ msys 'pacman -S --needed --noconfirm git bison flex make diffutils \
 msys 'pacman -Scc --noconfirm'
 
 # Install perl modules to enable tap tests
+msys 'where perl' 
 msys '(echo; echo o conf recommends_policy 0; echo notest install IPC::Run) | cpan' 

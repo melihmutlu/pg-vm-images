@@ -9,6 +9,8 @@ COPY `
 RUN `
   `
   [Environment]::SetEnvironmentVariable('MSYSTEM', 'UCRT64', 'Machine') ; `
+  <# Change MSYSTEM for current session too #> `
+  $env:MSYSTEM = 'UCRT64'; `
   scripts\windows_install_mingw64.ps1 ; `
   <# Change default console code page (0) with Windows code page (65001) to get rid of warnings in postgres tests #> `
   chcp 65001; `
