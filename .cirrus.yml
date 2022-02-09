@@ -23,7 +23,7 @@ env:
 gcp_auth: &gcp_auth
   env:
     # image-builder@pg-ci-images-dev.iam.gserviceaccount.com
-    GAC_DEV: ENCRYPTED[c11b72762b062ffe6f9eb672b9236f3fdfe3404edd786e47fc17ff79714e633688e79da85b9efccd79d52a6322a4f60f]
+    GAC_DEV: ENCRYPTED[9fdce2b90220308f7593bbc42488da4cde8fdb25044e92d9c096147bac5deef667210d92dc9a51b173c3f04c2d6c9383]
     # image-builder@pg-ci-images.iam.gserviceaccount.com
     GAC_MAIN: ENCRYPTED[388f06938c10a81478033cb9059c454d1d2e7580e9060e539f0be518b823b5a73cb1bc7c7fcefe351131c57c404c143f]
 
